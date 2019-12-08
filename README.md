@@ -11,7 +11,7 @@ composer install
 # Rode as Migrations
 php artisan migrate
 
-# Import Popule o banco de dados
+# Popule o banco de dados
 php artisan db:seed
 
 # Caso queira crie um virtual host apache ou entrão use o serivdor de desenvolvimento laravel 
