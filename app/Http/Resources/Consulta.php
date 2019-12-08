@@ -20,7 +20,10 @@ class Consulta extends JsonResource
             'id_paciente' =>$this->id_paciente,
             'id_clinica'=>$this->id_clinica,
             'data_consulta'=>$this->data_consulta,
-            'status'=>$this->status
+            'status'=>$this->status,
+            'nomePaciente'=>$this->nomePaciente,
+            'nomeMedico'=>$this->nomeMedico,
+            'nomeClinica'=>$this->nomeClinica
         ];
     }
     public function with($request){

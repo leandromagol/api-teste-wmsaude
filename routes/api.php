@@ -50,7 +50,7 @@ Route::prefix('consulta')->group(function(){
     Route::put('/','ConsultaController@store');
     Route::delete('/{id}','ConsultaController@destroy');
 
-});
+}); 
 
 Route::get('listarclinicas','ClinicaController@Listar');
 Route::get('listarmedicos','MedicoController@Listar');

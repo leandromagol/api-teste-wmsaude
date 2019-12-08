@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/pacientes', function () {
+    return view('paciente');
+});
+Route::get('/medicos', function () {
+    return view('medicos');
+});
+Route::get('/clinicas', function () {
+    return view('clinicas');
+});
+Route::get('/consultas', function () {
+    return view('consultas');
+});
+

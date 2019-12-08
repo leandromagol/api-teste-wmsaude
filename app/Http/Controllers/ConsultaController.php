@@ -15,7 +15,7 @@ class ConsultaController extends Controller
     public function index()
     {
         //
-        $consulta = Consulta::join('medicos','Consulta.id_medico','=','medicos.id')
+        $consulta = Consulta::join('medicos','consultas.id_medico','=','medicos.id')
                                     ->join('pacientes','consultas.id_paciente','=','pacientes.id')
                                     ->join('clinicas','consultas.id_clinica','=','clinicas.id')
                                     ->select('consultas.*','pacientes.nome as nomePaciente','medicos.nome as nomeMedico','clinicas.nome as nomeClinica')

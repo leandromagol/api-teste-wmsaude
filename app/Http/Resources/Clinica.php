@@ -18,7 +18,7 @@ class Clinica extends JsonResource
             'id'=>$this->id,
             'nome' => $this->nome,
             'cnes' =>$this->cnes,
-            'cnes'=>$this->cnes,
+            'proprietario'=>$this->proprietario,
             'cnpj'=>$this->cnpj
         ];
     }
