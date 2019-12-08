@@ -13,7 +13,7 @@ class CreateConsultasTable extends Migration
      */
     public function up()
     {
-        Schema::create('consulta', function (Blueprint $table) {
+        Schema::create('consultas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('id_medico')->unsigned();
             $table->bigInteger('id_paciente')->unsigned();
@@ -23,10 +23,9 @@ class CreateConsultasTable extends Migration
             $table->date('data_consulta');
             $table->enum('status',['Realizado','Cancelado','Aguardando']);
             $table->timestamps();
-            $table->foreign('id_medico')->references('id')->on('medico');
-            $table->foreign('id_paciente')->references('id')->on('paciente');
+            $table->foreign('id_medico')->references('id')->on('medicos');
+            $table->foreign('id_paciente')->references('id')->on('pacientes');
             $table->foreign('id_clinica')->references('id')->on('clinicas');
-
         });
     }
 

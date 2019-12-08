@@ -14,6 +14,18 @@ class Medico extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id'=>$this->id,
+            'nome' => $this->nome,
+            'crm' =>$this->crm,
+            'email'=>$this->email,
+            'especialidade'=>$this->especialidade
+        ];
+    }
+    public function with($request){
+        return [
+            'version'=>'1.0.0',
+            'author_url' => url('https://github.com/leandromagol'),
+        ];
     }
 }

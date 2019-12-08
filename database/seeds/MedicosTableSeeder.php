@@ -1,9 +1,8 @@
 <?php
-use App\Paciente;
 
 use Illuminate\Database\Seeder;
 
-class pacienteTableSeeder extends Seeder
+class MedicosTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,7 +12,7 @@ class pacienteTableSeeder extends Seeder
     public function run()
     {
         //
-        factory(Paciente::class,30)->create();
+        factory(\App\Medico::class , 10)->create();
 
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Medico;
-class medicoTableSeeder extends Seeder
+
+class ClinicasTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class medicoTableSeeder extends Seeder
     public function run()
     {
         //
-        factory(Medico::class,30)->create();
+        factory(\App\Clinica::class , 10)->create();
 
     }
 }

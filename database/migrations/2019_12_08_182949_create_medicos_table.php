@@ -17,7 +17,7 @@ class CreateMedicosTable extends Migration
             $table->bigIncrements('id');
             $table->char('nome',100);
             $table->string('crm');
-            $table->string('email');
+            $table->char('email',100);
             $table->string('especialidade');
             $table->timestamps();
         });

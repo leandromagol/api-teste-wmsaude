@@ -5,11 +5,15 @@
 use App\Clinica;
 use Faker\Generator as Faker;
 
-$factory->define(App\Clinica::class, function (Faker $faker) {
+$factory->define(Clinica::class, function (Faker $faker) {
     return [
-        'nome' => $faker->name,
-        'cnes'=>$faker->numberBetween(10000,210000000),
+        //
+        'nome'=>$faker->name,
+        'cnes'=>$faker ->numberBetween(1000,21000000),
         'proprietario'=>$faker->name,
-        'cnpj'=>$faker->numberBetween(10000,210000000),
+        'cnpj'=>$faker->numberBetween(1000,21000000)
+
+        
+
     ];
 });

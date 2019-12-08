@@ -14,6 +14,19 @@ class Consulta extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id'=>$this->id,
+            'id_medico' => $this->id_medico,
+            'id_paciente' =>$this->id_paciente,
+            'id_clinica'=>$this->id_clinica,
+            'data_consulta'=>$this->data_consulta,
+            'status'=>$this->status
+        ];
+    }
+    public function with($request){
+        return [
+            'version'=>'1.0.0',
+            'author_url' => url('https://github.com/leandromagol'),
+        ];
     }
 }

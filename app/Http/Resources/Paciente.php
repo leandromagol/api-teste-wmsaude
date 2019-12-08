@@ -14,6 +14,18 @@ class Paciente extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id'=>$this->id,
+            'nome' => $this->nome,
+            'sexo' =>$this->sexo,
+            'idade'=>$this->idade,
+            'email'=>$this->email
+        ];
+    }
+    public function with($request){
+        return [
+            'version'=>'1.0.0',
+            'author_url' => url('https://github.com/leandromagol'),
+        ];
     }
 }
