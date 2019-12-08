@@ -9,7 +9,8 @@ Instalação
 composer install
 
 # Rode as Migrations
-php artisan migrate
+Crie o banco de dados e o adicione no seu .env
+apos rode o comando : php artisan migrate
 
 # Popule o banco de dados
 php artisan db:seed
