@@ -165,7 +165,7 @@ export default {
              }else{
                 //edit
                 if (confirm('Tem certeza que quer atualizar esse registro')) {
-                     fetch('/api/pacientes',{
+                     fetch('/api/paciente',{
                 method:'put',
                 body:JSON.stringify(this.paciente),
                 headers :{
